@@ -1,0 +1,395 @@
+<!DOCTYPE html> <html style lang=zh-CN><!--
+ Page saved with SingleFile 
+ url: https://www.markdown.xyz/extended-syntax/#fn:bignote 
+ saved date: Thu Jul 21 2022 16:58:38 GMT+0800 (China Standard Time)
+--><meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<title>Markdown 扩展语法 | Markdown 指南中文版</title>
+<meta name=description content="构建在 Markdown 基本语法上的扩展功能。">
+<meta name=keywords content="Markdown, Markdown language, Markdown syntax, Markdown guide, Markdown cheatsheet, Markdown help, Markdown tutorial">
+<meta name=twitter:card content=summary>
+<meta property=og:type content=website>
+<meta property=og:url content=https://www.markdown.xyz/extended-syntax/>
+<meta property=og:title content="Markdown 扩展语法 | Markdown 指南中文版">
+<meta property=og:description content="构建在 Markdown 基本语法上的扩展功能。">
+<meta property=og:image content=https://www.markdown.xyz/assets/images/markdown-guide-og.jpg>
+<meta name=HandheldFriendly content=True>
+<meta name=MobileOptimized content=320>
+<style>.anchorjs-link{opacity:0;text-decoration:none}:hover>.anchorjs-link,.anchorjs-link:focus{opacity:1}[data-anchorjs-icon]::after{content:attr(data-anchorjs-icon)}@font-face{font-family:"anchorjs-icons";src:url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP)format("truetype")}/*!
+ * Bootstrap v4.6.0 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}footer,nav{display:block}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}h2,h3,h5{margin-top:0}p{margin-top:0;margin-bottom:1rem}dl,ol,ul{margin-top:0;margin-bottom:1rem}dt{font-weight:700}dd{margin-bottom:.5rem;margin-left:0}strong{font-weight:bolder}sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}a{color:#007bff;text-decoration:none;background-color:transparent}a:hover{color:#0056b3;text-decoration:underline}a:not([href]):not([class]){color:inherit;text-decoration:none}a:not([href]):not([class]):hover{color:inherit;text-decoration:none}code,pre{font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}pre{margin-top:0;overflow:auto;-ms-overflow-style:scrollbar}img{vertical-align:middle;border-style:none}table{border-collapse:collapse}th{text-align:inherit;text-align:-webkit-match-parent}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}h1,h2,h3,h5{margin-bottom:.5rem;line-height:1.2}h2{font-size:2rem}h3{font-size:1.75rem}h5{font-size:1.25rem}mark{padding:.2em;background-color:#fcf8e3}.list-unstyled{padding-left:0;list-style:none}.img-fluid{max-width:100%;height:auto}code{font-size:87.5%;word-wrap:break-word}pre{display:block;font-size:87.5%;color:#212529}pre code{font-size:inherit;color:inherit;word-break:normal}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1140px}}.row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.col-md-3,.col-md-6,.col-md-9{position:relative;width:100%;padding-right:15px;padding-left:15px}@media (min-width:576px){.col-sm-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}}@media (min-width:768px){.col-md-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-md-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-md-9{-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}}.table{width:100%;margin-bottom:1rem;color:#212529}.table td,.table th{padding:.75rem;vertical-align:top;border-top:1px solid #dee2e6}.table thead th{vertical-align:bottom;border-bottom:2px solid #dee2e6}.table-bordered{border:1px solid #dee2e6}.table-bordered td,.table-bordered th{border:1px solid #dee2e6}.table-bordered thead th{border-bottom-width:2px}.table .thead-light th{color:#495057;background-color:#e9ecef;border-color:#dee2e6}.collapse:not(.show){display:none}.nav{display:-ms-flexbox;-ms-flex-wrap:wrap;flex-wrap:wrap}.nav-link{display:block;padding:.5rem 1rem}.nav-link:focus,.nav-link:hover{text-decoration:none}.navbar{position:relative;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;padding:.5rem 1rem}.navbar .container{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between}.navbar-brand{display:inline-block;padding-top:.3125rem;padding-bottom:.3125rem;margin-right:1rem;font-size:1.25rem;line-height:inherit;white-space:nowrap}.navbar-brand:focus,.navbar-brand:hover{text-decoration:none}.navbar-nav{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;padding-left:0;margin-bottom:0;list-style:none}.navbar-nav .nav-link{padding-right:0;padding-left:0}.navbar-collapse{-ms-flex-preferred-size:100%;flex-basis:100%;-ms-flex-positive:1;flex-grow:1;-ms-flex-align:center;align-items:center}@media (max-width:991.98px){.navbar-expand-lg>.container{padding-right:0;padding-left:0}}@media (min-width:992px){.navbar-expand-lg{-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:start;justify-content:flex-start}.navbar-expand-lg .navbar-nav{-ms-flex-direction:row;flex-direction:row}.navbar-expand-lg .navbar-nav .nav-link{padding-right:.5rem;padding-left:.5rem}.navbar-expand-lg>.container{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.navbar-expand-lg .navbar-collapse{display:-ms-flexbox!important;display:flex!important;-ms-flex-preferred-size:auto;flex-basis:auto}}.navbar-dark .navbar-brand{color:#fff}.navbar-dark .navbar-brand:focus,.navbar-dark .navbar-brand:hover{color:#fff}.navbar-dark .navbar-nav .nav-link{color:rgba(255,255,255,.5)}.navbar-dark .navbar-nav .nav-link:focus,.navbar-dark .navbar-nav .nav-link:hover{color:rgba(255,255,255,.75)}.navbar-dark .navbar-nav .nav-link.active{color:#fff}.jumbotron{padding:2rem 1rem;background-color:#e9ecef}@media (min-width:576px){.jumbotron{padding:4rem 2rem}}.alert{position:relative;padding:.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:.25rem}.alert-success{color:#155724;background-color:#d4edda;border-color:#c3e6cb}.alert-info{color:#0c5460;background-color:#d1ecf1;border-color:#bee5eb}@-webkit-keyframes progress-bar-stripes{from{background-position:1rem 0}to{background-position:0 0}}@keyframes progress-bar-stripes{from{background-position:1rem 0}to{background-position:0 0}}@-webkit-keyframes spinner-border{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes spinner-border{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes spinner-grow{0%{-webkit-transform:scale(0);transform:scale(0)}50%{opacity:1;-webkit-transform:none;transform:none}}@keyframes spinner-grow{0%{-webkit-transform:scale(0);transform:scale(0)}50%{opacity:1;-webkit-transform:none;transform:none}}.align-top{vertical-align:top!important}.bg-dark{background-color:#343a40!important}.d-none{display:none!important}.d-inline-block{display:inline-block!important}@media (min-width:768px){.d-md-block{display:block!important}}.justify-content-between{-ms-flex-pack:justify!important;justify-content:space-between!important}@supports ((position:-webkit-sticky) or (position:sticky)){.sticky-top{position:-webkit-sticky;position:sticky;top:0;z-index:1020}}.pt-0{padding-top:0!important}.text-muted{color:#6c757d!important}/*!
+ * Bootstrap Table of Contents v1.0.1 (http://afeld.github.io/bootstrap-toc/)
+ * Copyright 2015 Aidan Feldman
+ * Licensed under MIT (https://github.com/afeld/bootstrap-toc/blob/gh-pages/LICENSE.md) */nav[data-toggle=toc] .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}nav[data-toggle=toc] .nav>li>a:focus,nav[data-toggle=toc] .nav>li>a:hover{padding-left:19px;color:#563d7c;text-decoration:none;background-color:transparent;border-left:1px solid #563d7c}@-webkit-keyframes sbx-reset-in{0%{-webkit-transform:translate3d(-20%,0,0);transform:translate3d(-20%,0,0);opacity:0}to{-webkit-transform:none;transform:none;opacity:1}}@keyframes sbx-reset-in{0%{-webkit-transform:translate3d(-20%,0,0);transform:translate3d(-20%,0,0);opacity:0}to{-webkit-transform:none;transform:none;opacity:1}}.highlight{background:#f8f8f8}.highlight .s{color:#BA2121}.highlight .na{color:#7D9029}.highlight .nl{color:#A0A000}.highlight .nt{color:#008000;font-weight:bold}.highlight .w{color:#bbbbbb}.highlight .mi{color:#666666}.highlight .s2{color:#BA2121}h1,h2,h3,h5{font-weight:500;padding-top:20px}.mdg-nav{font-size:.9rem}.jumbotron h1{font-weight:300;font-size:3.2rem;margin-top:-45px}.jumbotron p{padding:5px 0 0 0;font-size:24px;font-weight:300;margin-bottom:10px}@media (max-width:576px){.jumbotron p{padding:5px 0 0 0;font-size:1rem;font-weight:300;margin-bottom:10px}.jumbotron h1{font-size:1.5rem;margin-top:0px}}.jumbotron{background:#03A7DD;color:#FFFFFF;margin-bottom:20px;border-radius:0;height:195px}h2 .anchorjs-link{text-decoration:none}h3 .anchorjs-link{text-decoration:none}.site-footer{padding-top:35px;padding-bottom:20px;margin-top:50px;color:#99979c;background-color:#dbdbdb}nav[data-toggle="toc"]{padding-top:28px}nav[data-toggle="toc"] .nav>li>a:hover,nav[data-toggle="toc"] .nav-link.active,nav[data-toggle="toc"] .nav-link.active:focus,nav[data-toggle="toc"] .nav-link.active:hover,nav[data-toggle="toc"] .nav>li>a:focus{color:#03A7DD;border-left:1px solid #03A7DD}.footnotes{margin-top:40px;padding-top:20px;border-top-width:1px;border-top-style:solid;border-top-color:rgb(238,238,238)}.highlight{padding-top:10px;padding-right:10px;padding-left:10px;padding-bottom:1px;margin-bottom:20px}code{color:#212529}</style>
+<link rel=canonical href=https://www.markdown.xyz/extended-syntax/>
+<link rel="shortcut icon" type=image/x-icon href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCQkK3QkJC30JCQt9CQkLfQkJC30JCQt9CQkLfQkJC30JCQt9CQkLfQkJC30JCQt9CQkLfQkJC30JCQt9CQkLvQkJC3wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQkJC30JCQt8AAAAAQkJCn0JCQp8AAAAAAAAAACEhISBCQkK/ISEhQAAAAAAAAAAAQkJCMEJCQhAAAAAAAAAAAEJCQt9CQkLfAAAAAEJCQr9CQkLfAAAAAEJCQlAhISEgQkJC/yEhIX8AAAAAQkJCEEJCQvdCQkL/AAAAAAAAAABCQkLfQkJC3wAAAABCQkK/QkJC30JCQp9CQkL/QkJCUEJCQv8hISF/ISEhT0JCQudCQkL/QkJC/0JCQv8AAAAAQkJC30JCQt8AAAAAQkJCv0JCQv9CQkL/QkJC/0JCQv9CQkL/ISEhfwAAAAAAAAAAQkJC30JCQr8AAAAAAAAAAEJCQt9CQkLfAAAAAEJCQr9CQkL/QkJCryEhIRhCQkL/QkJC/yEhIX8AAAAAAAAAAEJCQt9CQkK/AAAAAAAAAABCQkLfQkJC3wAAAABCQkKAQkJCtwAAAAAAAAAAQkJCIEJCQr8hISF/AAAAAAAAAABCQkKfQkJCnwAAAAAAAAAAQkJC30JCQt8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEJCQt9CQkLvQkJC30JCQt9CQkLfQkJC30JCQt9CQkLfQkJC30JCQt9CQkLfQkJC30JCQt9CQkLfQkJC30JCQt9CQkKvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AAD//wAAAAAAAH/+AABO/gAATuYAAELCAABA5gAAROYAAE7mAAB//gAAAAAAAP//AAD//wAA//8AAA=="><style>.sf-hidden{display:none!important}</style><meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:;"><style>img[src="data:,"],source[src="data:,"]{display:none!important}</style></head>
+ <body data-spy=scroll data-target=#toc>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark mdg-nav">
+ <div class=container>
+ <a class=navbar-brand href=https://www.markdown.xyz/ style=margin-top:2px;margin-bottom:3px>
+ <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4wLjIsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMjA4cHgiIGhlaWdodD0iMTI4cHgiIHZpZXdCb3g9IjAgMCAyMDggMTI4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyMDggMTI4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxMCIgZD0iTTE1LDVoMTc4YzUuNTIzLDAsMTAsNC40NzcsMTAsMTB2OThjMCw1LjUyMy00LjQ3NywxMC0xMCwxMEgxNQ0KCWMtNS41MjMsMC0xMC00LjQ3Ny0xMC0xMFYxNUM1LDkuNDc3LDkuNDc3LDUsMTUsNXoiLz4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0zMCw5OFYzMGgyMGwyMCwyNWwyMC0yNWgyMHY2OEg5MFY1OUw3MCw4NEw1MCw1OXYzOUgzMHogTTE1NSw5OGwtMzAtMzNoMjBWMzBoMjB2MzVoMjBMMTU1LDk4eiIvPg0KPC9zdmc+DQo=" class="d-inline-block align-top" alt="Markdown 指南中文版" style=margin-top:4px;padding-right:10px height=23>
+ Markdown 指南中文版
+ </a>
+ <button class="navbar-toggler sf-hidden" type=button data-toggle=collapse data-target=#navbarNavAltMarkup aria-controls=navbarNavAltMarkup aria-expanded=false aria-label="Toggle navigation">
+ 
+ </button>
+ <div class="collapse navbar-collapse" id=navbarNavAltMarkup style=margin-top:2px>
+ <div class=navbar-nav>
+ <a class="nav-item nav-link" href=https://www.markdown.xyz/getting-started/>入门指南</a>
+ <a class="nav-item nav-link" href=https://www.markdown.xyz/basic-syntax/>基本语法</a>
+ <a class="nav-item nav-link active" href=https://www.markdown.xyz/extended-syntax/>扩展语法</a>
+ <a class="nav-item nav-link" href=https://www.markdown.xyz/cheat-sheet/>速查表</a>
+ <a class="nav-item nav-link" href=https://www.markdown.xyz/tools/>书写工具</a>
+ <a class="nav-item nav-link" href=https://www.markdown.xyz/book/>相关书籍</a>
+ </div>
+ </div>
+ </div>
+</nav>
+ 
+ <div class=jumbotron>
+ <div class=container>
+ <h1 class=no-anchor data-toc-skip id=markdown-扩展语法>Markdown 扩展语法</h1>
+ <p>构建在 Markdown 基本语法上的扩展功能。</p>
+ </div>
+ </div>
+ <div class=container>
+ <div class="row row-offcanvas row-offcanvas-right">
+ <div class="col-xs-12 col-sm-12 col-md-9">
+ 
+<h2 id=overview>概述<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#overview style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h2>
+<p>即便 John Gruber 的原始设计文档中所列出的 <a href=https://www.markdown.xyz/basic-syntax>Markdown 基本语法</a> 已经囊括了许多满足日常所需的元素，但对于某些人来说仍然不够。这就是 Markdown 扩展语法出现的缘由。</p>
+<p>一些个人和组织通过添加表格（tables）、代码块（code blocks）、语法高亮、将 URL 自动转换为链接和脚注（footnotes）等额外的元素来扩展 Markdown 的基本语法。这些额外添加的元素可以通过使用构建于 Markdown 之上的轻量级标记语言或通过向兼容的 Markdown 解析器添加扩展来启用这些新元素。</p>
+<h2 id=availability>可用性<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#availability style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h2>
+<p>并非所有的 Markdown 应用程序都支持扩展语法。你需要确认你所使用的应用程序是否支持你所需要使用的扩展语法。如果不支持，则有可能是需要开启相应的扩展模块。</p>
+<h3 id=轻量级标记语言>轻量级标记语言<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#%E8%BD%BB%E9%87%8F%E7%BA%A7%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80 style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h3>
+<p>目前有几种轻量级标记语言是 Markdown 的 <em>超集</em> 。它们支持 Gruber 的基本语法，并在其基础上添加了一些额外的元素，例如表格（tables）、代码块（code blocks）、语法高亮、将 URL 自动转换为链接和脚注（footnotes）。许多流行的 Markdown 应用程序能够支持以下列出的某个轻量级标记语言：</p>
+<ul>
+ <li><a href=https://commonmark.org/>CommonMark</a></li>
+ <li><a href=https://github.github.com/gfm/>GitHub Flavored Markdown (GFM)</a></li>
+ <li><a href=https://michelf.ca/projects/php-markdown/extra/>Markdown Extra</a></li>
+ <li><a href=https://fletcherpenney.net/multimarkdown/>MultiMarkdown</a></li>
+ <li><a href=https://rmarkdown.rstudio.com/>R Markdown</a></li>
+</ul>
+<h3 id=markdown-解析器>Markdown 解析器<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#markdown-%E8%A7%A3%E6%9E%90%E5%99%A8 style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h3>
+<p>目前可用的 <a href=https://github.com/markdown/markdown.github.com/wiki/Implementations>Markdown 解析器有数十个</a> 。其中许多都可以通过添加扩展模块的方式来支持 Markdown 扩展语法。请查看你所使用的 Markdown 解析器的文档以了解更多信息。</p>
+<h2 id=tables>表格（Tables）<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#tables style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h2>
+<p>如需添加表格，请使用三个或更多个连字符（<code class="language-plaintext highlighter-rouge">---</code>）来为每个列创建表头，并使用管道符（<code class="language-plaintext highlighter-rouge">|</code>）来分隔每个列。为兼容考虑，你还应该在行的两侧添加管道符。</p>
+<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code>| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+</code></pre></div></div>
+<p>渲染效果如下所示：</p>
+<table class="table table-bordered">
+ <thead>
+ <tr>
+ <th>Syntax</th>
+ <th>Description</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Header</td>
+ <td>Title</td>
+ </tr>
+ <tr>
+ <td>Paragraph</td>
+ <td>Text</td>
+ </tr>
+ </tbody>
+</table>
+<p>单元格（cell）宽度是可变的，如下所示。渲染效果相同。</p>
+<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code>| Syntax | Description |
+| --- | ----------- |
+| Header | Title |
+| Paragraph | Text |
+</code></pre></div></div>
+<div class="alert alert-success">
+ <i class="fas fa-lightbulb"></i> <strong>提示：</strong> 使用连字符（hyphens）和管道符（pipes）创建表格会很乏味。若要加快进度，请试一试 <a href=https://www.tablesgenerator.com/markdown_tables>Markdown 表格生成器</a>。使用图形界面生成表格，然后将生成的 Markdown 格式的文本复制粘贴到文件中即可。
+</div>
+<h3 id=对齐>对齐<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#%E5%AF%B9%E9%BD%90 style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h3>
+<p>通过在标题行中的连字符（hyphens）的左侧或右侧或两侧添加冒号（<code class="language-plaintext highlighter-rouge">:</code>），可以将对应列中的文本向左或向右或居中对齐。</p>
+<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code>| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
+</code></pre></div></div>
+<p>渲染效果如下所示：</p>
+<table class="table table-bordered">
+ <thead>
+ <tr>
+ <th style=text-align:left>Syntax</th>
+ <th style=text-align:center>Description</th>
+ <th style=text-align:right>Test Text</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td style=text-align:left>Header</td>
+ <td style=text-align:center>Title</td>
+ <td style=text-align:right>Here’s this</td>
+ </tr>
+ <tr>
+ <td style=text-align:left>Paragraph</td>
+ <td style=text-align:center>Text</td>
+ <td style=text-align:right>And more</td>
+ </tr>
+ </tbody>
+</table>
+<h3 id=格式化表格中的文本>格式化表格中的文本<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%A1%A8%E6%A0%BC%E4%B8%AD%E7%9A%84%E6%96%87%E6%9C%AC style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h3>
+<p>你可以为表格中的文本设置格式。例如，可以添加 <a href=https://www.markdown.xyz/basic-syntax/#links>链接（links）</a>、<a href=https://www.markdown.xyz/basic-syntax/#code-1>代码（code）</a> （注意，只能为单词或短语添加反引号 (<code class="language-plaintext highlighter-rouge">`</code>) ，不能添加 <a href=https://www.markdown.xyz/basic-syntax/#code-blocks>代码块（code blocks）</a>）以及 <a href=https://www.markdown.xyz/basic-syntax/#emphasis>强调（emphasis）</a>。</p>
+<p>不支持的格式包括标题（headings）、块引用（blockquotes）、列表（lists）、水平分割线（horizontal rules）、图片（images）或 HTML 标记。</p>
+<h3 id=转义表格中出现的管道符pipe-characters>转义表格中出现的管道符（Pipe Characters）<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#%E8%BD%AC%E4%B9%89%E8%A1%A8%E6%A0%BC%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E7%AE%A1%E9%81%93%E7%AC%A6pipe-characters style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h3>
+<p>如需在表格中显示管道符 (<code class="language-plaintext highlighter-rouge">|</code>)，你可以使用管道符的 HTML 字符编码（<code class="language-plaintext highlighter-rouge">&amp;#124;</code>）来实现。</p>
+<h2 id=fenced-code-blocks>围栏代码块（Fenced Code Blocks）<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#fenced-code-blocks style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h2>
+<p>Markdown 的基本语法允许你通过缩进四个空格或一个制表符来创建 <a href=https://www.markdown.xyz/basic-syntax#code-blocks>代码块</a> 。如果你觉得不方便，可以试试围栏代码块（fenced code blocks）。根据 Markdown 解析器或编辑器的不同，代码块的前后可以使用三个反引号（<code>```</code>）或三个波浪号（<code class="language-plaintext highlighter-rouge">~~~</code>）来标记围栏代码块。这有什么优势吗？你不必费力缩进任何行了！</p>
+<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code>```
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+</code></pre></div></div>
+<p>渲染效果如下所示：</p>
+<div class="language-text highlighter-rouge"><div class=highlight><pre class=highlight><code>{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+</code></pre></div></div>
+<div class="alert alert-success">
+ <i class="fas fa-lightbulb"></i> <strong>提示：</strong> 需要在代码块中显示反引号（backticks）吗？请参见 <a href=https://www.markdown.xyz/basic-syntax/#escaping-backticks>这一章节</a> 以了解如何对其进行转义。
+</div>
+<h3 id=语法高亮>语法高亮<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h3>
+<p>许多 Markdown 解析器都支持围栏代码块的语法高亮功能。此功能允许你为编写代码所用的编程语言添加带颜色的语法高亮显示。如需添加语法高亮，请在围栏代码块前的反引号旁指定所用的编程语言。</p>
+<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code>```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+</code></pre></div></div>
+<p>渲染效果如下所示：</p>
+<div class="language-json highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=p>{</span><span class=w>
+  </span><span class=nl>"firstName"</span><span class=p>:</span><span class=w> </span><span class=s2>"John"</span><span class=p>,</span><span class=w>
+  </span><span class=nl>"lastName"</span><span class=p>:</span><span class=w> </span><span class=s2>"Smith"</span><span class=p>,</span><span class=w>
+  </span><span class=nl>"age"</span><span class=p>:</span><span class=w> </span><span class=mi>25</span><span class=w>
+</span><span class=p>}</span><span class=w>
+</span></code></pre></div></div>
+<h2 id=footnotes>脚注（Footnotes）<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#footnotes style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h2>
+<p>脚注（Footnotes）允许你添加注释（notes）和引用（references），而不会使文档正文混乱。当你创建脚注时，带有链接的上标数字会出现在你引用脚注的位置。 读者可以单击链接以跳转至页面底部的脚注内容处。</p>
+<p>要创建一个脚注的引用，请在方括号中添加一个插入符（caret）以及一个标识符，标识符可以是数字或单词，但不能包含空格或制表符。标识符的作用仅是将脚注的引用和脚注本身进行关联，在输出中，脚注按顺序编号。</p>
+<p>另一种创建脚注的方式是在方括号内添加一个插入符（caret）以及一个数字，后面跟着冒号和文本，即（<code class="language-plaintext highlighter-rouge">[^1]: My footnote.</code>）。这种方式让你不必在文档末尾添加脚注。你可以将脚注放到除列表（lists）、块引用（block quotes）和表格（tables）之外的任何位置上。</p>
+<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code>Here's a simple footnote,[^1] and here's a longer one.[^bignote]
+
+[^1]: This is the first footnote.
+
+[^bignote]: Here's one with multiple paragraphs and code.
+
+    Indent paragraphs to include them in the footnote.
+
+    `{ my code }`
+
+    Add as many paragraphs as you like.
+</code></pre></div></div>
+<p>渲染效果如下所示：</p>
+<p>Here’s a simple footnote,<sup id=fnref:1 role=doc-noteref><a href=#fn:1 class=footnote rel=footnote>1</a></sup> and here’s a longer one.<sup id=fnref:bignote role=doc-noteref><a href=#fn:bignote class=footnote rel=footnote>2</a></sup></p>
+<div class=footnotes role=doc-endnotes>
+ <ol>
+ <li id=fn:1 role=doc-endnote>
+ <p>This is the first footnote.&nbsp;<a href=#fnref:1 class=reversefootnote role=doc-backlink>↩</a></p>
+ </li>
+ <li id=fn:bignote role=doc-endnote>
+ <p>Here’s one with multiple paragraphs and code.</p>
+ <p>Indent paragraphs to include them in the footnote.</p>
+ <p><code class="language-plaintext highlighter-rouge">{ my code }</code></p>
+ <p>Add as many paragraphs as you like.&nbsp;<a href=#fnref:bignote class=reversefootnote role=doc-backlink>↩</a></p>
+ </li>
+ </ol>
+</div>
+<h2 id=heading-ids>自定义标题的 ID<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#heading-ids style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h2>
+<p>许多 Markdown 解析器都支持为 <a href=https://www.markdown.xyz/basic-syntax/#headings>标题（headings）</a> 自定义 ID，某些 Markdown 解析器会自动为标题添加 ID。通过添加自定义 ID， 能够让你直接链接到这个标题，并且还能使用 CSS 修改其样式。如需为标题添加自定义 ID，请将自定义 ID 用花括号括起来并与标题一起放在同一行。</p>
+<div class="language-text highlighter-rouge"><div class=highlight><pre class=highlight><code>### My Great Heading {#custom-id}
+</code></pre></div></div>
+<p>输出的 HTML 如下所示：</p>
+<div class="language-html highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=nt>&lt;h3</span> <span class=na>id=</span><span class=s>"custom-id"</span><span class=nt>&gt;</span>My Great Heading<span class=nt>&lt;/h3&gt;</span>
+</code></pre></div></div>
+<p>###链接到标题的 ID</p>
+<p>你可以在文档中创建一个 <a href=https://www.markdown.xyz/basic-syntax/#links>标准链接</a> ，其后是井号（<code class="language-plaintext highlighter-rouge">#</code>）和自定义的标题 ID ，从而链接到这个标题。</p>
+<table class="table table-bordered">
+ <thead class=thead-light>
+ <tr>
+ <th>Markdown</th>
+ <th>HTML</th>
+ <th>Rendered Output</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><code class=highlighter-rouge>[Heading IDs](#heading-ids)</code></td>
+ <td><code class=highlighter-rouge> &lt;a href="#heading-ids"&gt;Heading IDs&lt;/a&gt;</code></td>
+ <td><a href=#heading-ids>Heading IDs</a></td>
+ </tr>
+ </tbody>
+</table>
+<p>其它网站也可以通过将自定义的标题 ID 添加到网页的完整的 URL 后面来链接到对应的标题（例如，<code class="language-plaintext highlighter-rouge">[Heading IDs](https://www.markdown.xyz/extended-syntax#heading-ids)</code>）。</p>
+<h2 id=definition-lists>定义列表（Definition Lists）<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#definition-lists style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h2>
+<p>某些 Markdown 解析器允许你创建术语（terms）及其相应的定义（definitions）的列表，即 <em>定义列表（definition lists）</em>。要创建定义列表，请在第一行键入术语，然后在下一行中键入冒号，冒号后跟着空格和此术语的具体定义。</p>
+<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code>First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+</code></pre></div></div>
+<p>输出的 HTML 如下所示：</p>
+<div class="language-html highlighter-rouge"><div class=highlight><pre class=highlight><code><span class=nt>&lt;dl&gt;</span>
+  <span class=nt>&lt;dt&gt;</span>First Term<span class=nt>&lt;/dt&gt;</span>
+  <span class=nt>&lt;dd&gt;</span>This is the definition of the first term.<span class=nt>&lt;/dd&gt;</span>
+  <span class=nt>&lt;dt&gt;</span>Second Term<span class=nt>&lt;/dt&gt;</span>
+  <span class=nt>&lt;dd&gt;</span>This is one definition of the second term. <span class=nt>&lt;/dd&gt;</span>
+  <span class=nt>&lt;dd&gt;</span>This is another definition of the second term.<span class=nt>&lt;/dd&gt;</span>
+<span class=nt>&lt;/dl&gt;</span>
+</code></pre></div></div>
+<p>渲染效果如下所示：</p>
+<dl>
+ <dt>First Term</dt>
+ <dd>This is the definition of the first term.</dd>
+ <dt>Second Term</dt>
+ <dd>This is one definition of the second term.</dd>
+ <dd>This is another definition of the second term.</dd>
+</dl>
+<h2 id=strikethrough>删除线（Strikethrough）<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#strikethrough style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h2>
+<p>你可以贯穿单词的中心放一条横线从而删除这些单词。其效果看起来是这样的： <del>like this</del>。此功能允许你标记某些单词是错误的，不应该出现在文档中。在单词前面和后面分别放置两个波浪号（<code class="language-plaintext highlighter-rouge">~~</code>） 来表示删除这些单词。</p>
+<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code>~~The world is flat.~~ We now know that the world is round.
+</code></pre></div></div>
+<p>渲染效果如下所示：</p>
+<p><del>The world is flat.</del> We now know that the world is round.</p>
+<h2 id=task-lists>任务列表（Task Lists）<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#task-lists style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h2>
+<p>任务列表（task lists 或者 checklists）允许你创建带有复选框的项目列表。在支持任务列表的 Markdown 应用程序中，复选框将显示在内容旁边。要创建任务列表，请在任务列表项前面添加破折号（<code class="language-plaintext highlighter-rouge">-</code>）和中间带空格的方括号（<code class="language-plaintext highlighter-rouge">[ ]</code>）。要选中复选框，请在方括号中间添加一个 <code class="language-plaintext highlighter-rouge">x</code> ，即（<code class="language-plaintext highlighter-rouge">[x]</code>）。</p>
+<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code>- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+</code></pre></div></div>
+<p>渲染效果如下所示：</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAABPCAIAAAA88SMyAAAYN2lDQ1BJQ0MgUHJvZmlsZQAAWIWVWQdUFEuz7pnNLEtYcs4555xzlJwRlrxklgwSRRRBVFAkiAERAVFMRBEFUVERERTBiCKCil5EEZH0Bgz3/ve98955fU7PfKe6urpqqru6ahcAHlVKbGwkzARAVHQCzcnCWNDD00sQ9woQABdgA0qAkxIYH2vk4GALkPb7/Z/t2yiANt4jchuy/vv4/9qYg4LjAwGAHBAcEBQfGIXgSwCg1QNjaQkAYGYRukhyQiyCsYiWgJWGKIhg0Q0c+hNrbuCAn9h2k8fFyQTB/gDg6SkUWigADBt6CSYFhiJyGIqQMXJ0EDUaYT2GYP3AMEoQANwTCI9sVFQMgnnoESwZ8A85of8hM+CPTAol9A/+actmw5tS42MjKan/z8/xf7eoyMTfa4ggnT6MZum0YfPGd4uIsdnAiO5Qf3SA/RYEkxH8kBq0yb+B34YlWrr+4v8eGG+CfDPADgBMH0QxtUEwL4KFEyNcjX5hfQptcy7CD3ulhbm4/5QPR9NinH7Jh9OiI+1tf8kpCgu2+o1rguPNnH/zhFDNrRCM+BBupyZYufyS2Z9EdbNHMAOCn8VHONv8mvs+LczE/s9aiU4bOiM+R4Go+N+2oERDaOZOP/lR6mFUK/tfdNuEMBfLn3NRWwMpmzpwIjg8ON7D9rc+QcGmZj/1QeUGR7v+0hNVEptg7PSLvzY20uEXP6orONJigy6M4MH4JOffc+cSkM320xY0CKdYO/xcF80am+Dg8lM3tCCwBSbAFAiCRKQHgBgQDqiDs22z4PeIOaAAGggFwUDuF+X3DPfNkWjk6QzSwEcEBYP4P/OMN0eDQRJCX/1D/fmUAyGbo0mbMyLAWwRHobnR+mgdtC3yNES6MloTrfV7niDj71WxZlhTrCXWHCvlR82l/UuuIAhELIhEOg3YIO9gxKoNHaJ/6/63HMxbzAPMa8wjzARmHLiBNwgf9b9Z+Lc06h+aHZhApJr/si7gn9ahxRGt1dDGaD1Ef0R3NDuaG8ihVRFLjNAGiG1qCPXvr/Y/6Z74W2uCIgEmcBAMCZL/5mOQZlD7M2fDtn/q+VOvgD+WmPwZ+fdqJv+wLQh52/ybE7ULdRF1C9WDuo3qQrUBQdRVVDtqAHVlA//ZG28298bv1Zw29YlA5FB/8yieVnynuPKvtSm/1qdt+h8kBKckbBwck5jYVBo1NCxB0AiJ1sGCVtGB8rKCyopKGgBsxP6foeWL02ZMh9jv/00LTwdAQwAhXv+bFjwKQOdzJNzR/U0T34EcZzQAt/0DE2lJP2nojQcG0AFG5KRwAX4kdkkiFikDdaADDIEZsAZbgAvwBFuR7xwGohCtk8E2kAPyQSHYBw6CSnAUnAD14Ay4ANpAF+gBN8FdMAQegafIXpkCH8Ac+AaWIQjCQSSIBeKCBCAxSAZShjQhfcgMsoWcIE/IHwqFoqFEaBu0HSqESqBK6DjUAJ2HOqAe6Db0ABqHXkHvoHnoB4yC6WFWmA8WhxVgTdgItoFdYF84FI6D0+A8uBguh2vgJrgV7oHvwo/gCfgDvIACKCKKHSWEkkNpokxQW1BeqBAUDZWJ2o0qQ9WgzqI6EU+PoCZQs6glNBbNghZEyyH71RLtig5Ex6Ez0UXoSnQ9uhXdhx5Bv0LPodcwJAwvRgajjbHCeGBCMcmYfEwZpg7TgrmBnKkpzDcsFsuOlcBqIGfVExuOTccWYauxzdhr2AfYSewCDofjwsng9HBbcBRcAi4fV4Frwl3FDeOmcN/xRLwAXhlvjvfCR+Nz8WX4Rnw3fhg/jV8mMBHECNqELYQgQiphL6GW0Em4T5giLNMx00nQ6dG50IXT5dCV052lu0H3jO4LkUgUJmoRHYlUYjaxnHiO2E98RVyiJ9NL05vQ+9An0hfTn6K/Rj9O/4VEIomTDElepARSMamBdJ30gvSdgYVBnsGKIYghi6GKoZVhmOETI4FRjNGIcStjGmMZ40XG+4yzTAQmcSYTJgpTJlMVUwfTY6YFZhZmJeYtzFHMRcyNzLeZZ8g4sjjZjBxEziOfIF8nT7KgWERYTFgCWbaz1LLcYJlixbJKsFqxhrMWsp5hHWSdYyOzqbK5saWwVbFdYZtgR7GLs1uxR7LvZb/APsr+g4OPw4gjmKOA4yzHMMciJw+nIWcw527OZs5HnD+4BLnMuCK49nO1cT3nRnNLcztyJ3Mf4b7BPcvDyqPDE8izm+cCzxNemFea14k3nfcE7wDvAh8/nwVfLF8F33W+WX52fkP+cP4D/N387wRYBPQFqAIHBK4KvBdkEzQSjBQsF+wTnBPiFbIUShQ6LjQotCwsIewqnCvcLPxchE5EUyRE5IBIr8icqIConeg20dOiT8QIYppiYWKHxG6JLYpLiLuL7xRvE5+R4JSwkkiTOC3xTJIkaSAZJ1kj+VAKK6UpFSFVLTUkDUurSYdJV0nfl4Fl1GWoMtUyD2Qxslqy0bI1so/l6OWM5JLkTsu9kmeXt5XPlW+T/6QgquClsF/hlsKaoppipGKt4lMlspK1Uq5Sp9K8srRyoHKV8kMVkoq5SpZKu8pnVRnVYNUjqmNqLGp2ajvVetVW1TXUaepn1d9piGr4axzWeKzJqumgWaTZr4XRMtbK0urSWtJW107QvqD9l46cToROo86MroRusG6t7qSesB5F77jehL6gvr/+Mf0JAyEDikGNwWtDEcMgwzrDaSMpo3CjJqNPxorGNOMW40UTbZMMk2umKFML092mg2ZkM1ezSrMX5sLmoeanzecs1CzSLa5ZYixtLPdbPrbiswq0arCas9awzrDus6G3cbaptHltK21Ls+20g+2s7UrtntmL2Ufbt20BW6y2lG557iDhEOdw2RHr6OBY5fjWSclpm9MtZxZnP+dG528uxi57XZ66Sromuva6Mbr5uDW4Lbqbupe4T3goeGR43PXk9qR6tnvhvNy86rwWvM28D3pP+aj55PuM+kr4pvje3sq9NXLrFT9GP4rfRX+Mv7t/o/8KZQulhrIQYBVwOGAu0CTwUOCHIMOgA0HvgvWCS4KnQ/RCSkJmQvVCS0PfhRmElYXNUk2oldTP4ZbhR8MXI7ZEnIpYj3SPbI7CR/lHdUSToyOi+2L4Y1JiHsTKxObHTsRpxx2Mm6PZ0OrioXjf+PYEViTJHkiUTNyR+CpJP6kq6XuyW/LFFOaU6JSBVOnUgtTpNPO0k+no9MD03m1C23K2vcowyjieCWUGZPZmiWTlZU1lW2TX59DlROTcy1XMLcn9ut19e2ceX1523uQOix2n8xnyafmPd+rsPLoLvYu6a7BApaCiYG130O47hYqFZYUrRYFFd/Yo7Snfs14cUjy4V33vkX3YfdH7Rvcb7K8vYS5JK5kstSttPSB4YPeBrwf9Dt4uUy07eojuUOKhiXLb8vYK0Yp9FSuVYZWPqoyrmg/zHi44vFgdVD18xPDI2aN8RwuP/jhGPTZ23OJ4a414TdkJ7ImkE29r3WpvndQ82VDHXVdYt3oq+tREvVN9X4NGQ0Mjb+Pe0/DpxNPvmnyahs6Ynmk/K3f2eDN7c+E5cC7x3Pvz/udHL9hc6L2oefHsJbFLh1tYWna3Qq2prXNtYW0T7Z7tDzqsO3o7dTpbLstfPtUl1FV1he3K3m667rzu9atpVxeuxV6b7Qntmez163163eP6wz7HvsEbNjf6b5rfvH7L6NbVfr3+rtvatzvuaN5pu6t+t3VAbaDlntq9lkH1wdb7Gvfbh7SGOh/oPugeNhjuGTEdufnQ6uHdR/aPHoy6jo499nk8MRY0NjMeOf75SdKT5afZzzDPdj9nel72gvdFzUupl80T6hNXXpm+Gnjt/PrpZODkhzfxb1am8t6S3pZNC0w3zCjPdL0zfzf03vv91IfYD8uz+R+ZPx7+JPnp0l+Gfw3MecxNfaZ9Xp8v+sL15dRX1a+9Cw4LL75FfVte3P2d63v9kubSrR/uP6aXk1dwK+WrUqudazZrz9aj1tdjKTTKZiqAQjocEgLA/CkASJ4AsAwBQOf9szb71VBI8gFv8pKQLEYXybVKwSBEhjygehiGo+BJVDBqHl2IUcRMYKtx4XhTgjgdAxGmR5GYGWQYrZhozMfJz1n52QLYL3Ciufy5r/EK8BXwfxb0Fboroi16UpxVIltyWtpeplmOQT5Q4aLisrKOSrzqUbU+9VcaS1r02tw60rqaeqb69gZehmFGScb5JmWm9Wad5ncsnljOWC3aoG2Z7HjtJbYoOWg7GjtZOdu7OLm6urm7e3h4enp5eXl7+Xj5em318HPzd6LYBZgH6gepBUuHCISyhOHClqmfwl9FPIy8hZzK0zHVsXviUmmUeKMEroRPiT1Jh5JjUqxTRVJX0x6nN2/bleGfqZHFgJytyzkluWHb9fJY8mZ2dOeX7gzbpVvAXrBaiC7S33Nmr+a+C/tXSwUOyByUL1M8pFSuUqFaqValdli9WvuI+dHgY+XHx06w1Rqd9K2LPpVWn9+wv7Hq9Mmm5jMdZ683D5/7eEHoYuyloVaptsj28o7WzvuXp7vWutmvKl1z6ynpnemzvFF1896tV/1zd7B3xQYs7gUNxt+PHHJ9oDHMP0I3svRw8tG90auPO8e6xq8+6Xna/az5+f4XkS+NJ7gm5l8Nve6YrH9TNbXv7Y7p1Jmod/7v7T6ozJJnP3y8+an2r/y58M/286pfhL9KLfh+6/6uuHTgx8sVrlWPtdr19Y19AoiAB8kSnZDapwm8hSSgGOgazAPnwvOoWNR39C6MEOYGNgEnj/uC7yVU02UQg+g9SM4MHowBTInMheR6liHW7+wSHL6cpVz3eUi8tnxF/IOCJCFH4f0iQ2JEcTOJJMk6qQfSX2WZ5CTlVRW0FLWUVJSlVPhVmdQgta/qU8ht1a/Vod2gU6lbqJeuH27gbWhvZGysYSJvKmrGbc5kgbVYtpyzmrIesxmw7bY7Z1+zpdQhzzHeieLs4KLvKuPG6Y5x/+zxzLPf66L3UZ8C3/itvn5m/rIUFsr3gOeBPUG1wbtCIkLtwhSozNQv4Y8iWiPLo1KjPWLUY8mx7+Ku0krjgxLUEjGJo0knkxNTzFJZUyfTLqRnb7PP4M14n9mZtSc7PMcp1xTZGdo71PMVd8rsEisQ2M1VSC4i7kHvWS3+tvfzvvn9S6W4A5wHJcs0DpmWO1R4V4ZW0Q5nVO88UnL08LFTx9trhk8snZSq8zlVWN/S8KRxrUnojNnZsOY959rOf7qodmlHy4M2UrteB7Wz4vLdrvVutauR12p7nl1n7jO8Qb1ZeKuxv//2u7ukAZV7XoO595uGHg9jR1Qf+j3KG6193Df29gndU4VnLs9TXxx5eWti8bXSJO3Nxan5admZ0Hcn3r+c5fno8enwX3Ofk77ILZAX6ZbgHx9WLq9Rf/mfDnAAWWCJ1DuHwB0IC1lA+6FJWA8+jiKhdqBx6BKMOOYaNghHxt3G7yLY0wnQLREf0reTTjJUMJYw7WUuIVeynGRtZetnf8GxxEXmluMx56XwbeM/JHBWsFfoofCUyEfRebE5JGsak+yVOim9XcZLVkEOkhuWr1VIVrRWElRaVB5UqVPNVHNVl9WANcY0z2jlarvpSOus6g7pndBPNrA2FDBcMBowPmmSaepmJm+OMX9mcclyt5W/tboN0WbCtsWuwN4XiRQYh3HHJqdsZ2cXMZdvrv1ule4RHjqeRM+nXqe903wsfdl932w975flb0PhoEwGnA1MCzIPZg5+GlIXGhemQ0VTB8MPRfhHSkV+jmqPzo4xjyXEDsQV0azj8fE3EnIT9ROXk9qS41PkU96l1qb5pXOnP9xWnGGZCWd2Z2VmW+bw5SznTmzvzzu/oyo/b2fULrcC/d3ihaTChaJne64XN+49sC9nf3IJrTT2AJIWlMUdiiuPrYiupFb5H3autj5ie9T3WOrx6pobJz6dZKvTOGVb79Tg2Oh9Or3p0pnlZotzpedfXpS5lNTS00Zsd+4o73zaJXQlsvvKNZae8N7rfTw3Em4O9ovfzrjzcED6Xu7g5JDbg9GRwIcLo7vGuMfPPDV8Nvoie8LutfObfW8X3x2YvfHZZXF8w/8/f6PbaFh1AE6aA+B2AABnLQQXAyBWj9wfugA4kABw0QIwVwWArsQCyEfyz/3BD4yQu2M7qAU3kOiBReKHFRQB7YGakVrvK8wB68B+8Ha4Hh6Ev6C4UUaoMNQ+pP5+jSai1dEU9B50B3oaw4YxwyQiVdcYlh5rhE3GnsXO4IRxfrgjuBd4YXwY/hx+lWBLOEb4RudAd4ZIIkYTh+k16Y+TiKQk0iSDI0MPozJjLRMX0z5mAvMOMkzOZcGwFLAysVawibFdZDdlH+OI4cRz1nKZcL3h3skjx/OIN4tPlu8Zf7GAqcCqYKdQmrC+CEbkvuhhsQhxPQmyxHvJPqka6VyZYFlbOS15eQUFRX0lV+VIle1IyG9RH9H4psWnbaGTpNug99KAy9DdqML4pamkWaL5TUtuq1DrgzaHbJPsDO3W7Xu2FDmEO1Kd8pzPubxx43Z39ij2HPAm+Tj6lm0d82ekqARYBLoGBQVnhZwOnaEqhedEjERJIjvvSZwGrSz+e6J7UlPyx1SONMV0422eGVmZHdmEnLDce3nqO2p2Mu7KLJguNCrK29NSPLGPYb99ybkDqgdvHLIvv1dpWXWz2vHI92P9Nd21F+oO1ac1Upu8zxqdYzv/6uKZlqy2rR1el7ddabu61KvVF3Vzd3/FndqB5sHuoQfD04/wj/XG9zz9+sJromWSOEWZ7nyPn5X4BP6q/sw/X/6Vd6F1MWpJ7cfKSuua32b8EAU2IA6UgS7wGsJD8pALlAbVIJX+Z5gLNoYj4IPwNfgDUrObILdJNWoAtYyWQfugi9E96AWMNIaCKcc8wBKxFtgd2D4cFmeN24sbw4vi4/E3CLyEZMIonRbdMSIdMZk4Te9Bf49kQupi0GRoZVRn7GAyYLqJ1Kjj5GDyPEsuKytrPZsB2zh7IgcrRyunFxfM1cTtyUPg6eKNR3w9w39KgCooL/hNqEd4r4ifqIoYndgb8V6JWskCqXhpfxlHWTM5XXkNBTVFdSVtZWMVO1VvtWj1fI06zftaazqqujF6Z/XnDbWM8oxHTCXMssyfWupYVVuv2jrYldrf2bLiKO8U5HzE5QniYx+P457vvdV8tvuO+In5x1O6AtaC9IIzQnrCCFS38JMRi1G20SdiVuI8ae0JXInbkp6kKKamp11J/5GhnZmTNZgjnJu6fWSHYn7xzk8F9rsbC5f3GBZv29uyb6HEtLTmIKGMdmisQr/yxGF8dcyR0WN6x+tOsNYW1GFPFTfwN15qsjsz2Zxynnjh6CXVljtt/u0Lnbu6eK+0XHXvgXtb+qg3eW8N3s6+qzrwfvDEkPcw88jVR4GPwVjVE62nz5/vfKk88fJ10RudqdnpI+/s3y/M7vq49JfV3I7P5+cHv8x8Xf/Guajy3WVp24/G5fermmsHN/0vBVxAFmgAI2ANkkK8nw01QWMwFlaFA+D9cA+SRYig3FAFqCuoL2gptD+6Aj2CYcTYYgoxd7EkrBO2AvsaJ4fLwN3Hi+Nz8K8IFoQLdKJ0VUR24kF6dvpKkgCpjkGRoYvRlvElkm8wMjeR7cifWSpYTVnn2U6wu3EQOXo407jUub5xd/Bk8VrxcSC+viJwUJCGZCCqItyiaOTumRQflxiWvI9U5o9kXsh+kFtRICvKKlkjJ7pUtVvto4agprtWifawLpuer36jwbKRg3GjKcEsyvyxpbXVTRtb2zF7qgNwrHLWdXntVuxh4Lngfd6X5qfuPx9QFSQTfCZUOqwuXDyiIUohuiPWIm4sPioRm1STYpT6Mj0lA5tZnM2aU7FdOO9Mvs7OewWBhVDR6WKffdj9VaX8Bw6W4Q4ll09XelWNVHsc+XqsoSa4Fndyd923eo+GltOsTQlnRpu1zh25gLkYfWm81aKto0Oxs7FL9ErVVYZrGT3vr7v39d1UvnX8NvlO3t3Fe5GDb4Z8H4yPuD98POry+Pa48pOSpx+e678ofvn8ldzrzMmhKZG3KdP33om8T/pwbXbtk9Jf1nOenz3n7b/ofhVZwC28/ta5mP1d7/vcUs4P8o9jy4TluOXxFeOVipWZVY3VHasP10TWqGtn1ubWVddT1i9v+D8+REV58/qA6I0BwLxYX/8iDgCuBIDV/evryzXr66snkCLjGQDXIn/+77N51zABcPj6BrqZNpn97/9f/gsWMchQp0XQLgAAAgNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIj4KICAgICAgICAgPGV4aWY6UGl4ZWxZRGltZW5zaW9uPjc5PC9leGlmOlBpeGVsWURpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6UGl4ZWxYRGltZW5zaW9uPjE4NzwvZXhpZjpQaXhlbFhEaW1lbnNpb24+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgqv9IVpAAAYDUlEQVR4Ae1dCVwT19afuCS2Coqo9YlPpdAnm0St4PKpoLhU3Chai63a1rq0ffa9CvoE+xW1X1v1c+n3vV9bP23dsFawghEIWBVroa2ATyougAtxI7gAVpIuJFXmO/fezGSSuRMSCviqM7/8knvvOffcc07OTO6dnP9cBcuyjHzIHnDaA62c5pQZZQ8gD8gRI8eBax6QI8Y1f8nccsTIMeCaB+SIcc1fMrccMXIMuOYBOWJc85fMLUeMHAOueUCOGNf8JXO3obrAbDZXV1ffuXOnrq7OjqFdu3adO3fu0qWLUqm0IzGMuUJf5d6lh7tKQUiGqkoD075n144WTpOxotrg5uXF1XkBxqzY5xMf//t3741X8W2NLtz+IXFtxoT4fwzt2q7RMv59Oz5o6+jXGAgXCBovL68A0QGNJJ4oPq09NWpsZPx31zjSnY0jI0eNWsnXfzq1GRiOVf7KMfCfP5dlV94pqyb14rSPtp3gO/E8jgrCLr9VX9yTnVpSIx7FkYQ/Cu2BW0ePmJ9++qlbt26dOnV6XHCoVKrbt2+7ubkBCRgoLu7ov8yzjeaozkK6fW63gmXqj/7AhUjpt3lM66lDezwm6ts9tvSUbt+L+AJjPr9x+8ayWhGPgwabLqwKiQFtHXT445KIdQ9Qf3rE1NfXP/bYYwqF5ceF6Hfq1Kljx47duHEDSMBAU9otdHa/9ge+JteHyhPfEJ4vCytw4U7eZ1eNz43vBhXTtYSRz63dfyD+2UFPBc4sMrEnNry6SHMR2lc8O+ztO/dMq98cFjgt/fIvqKPh4qfzY54KUD8VEL5kb74Jy7K+UbswTEFeKhIeoB4ybXm+nr/eGLM2JGBR6ui3U6+bRP/CgrToWV8WnkhJeBGxBU7bzV3tLmvfm7xwS+rOVdA+ftcZrABdmlGXHx8zlnRfruEUNl1LSXiZDP3yKsrQFPmODScalBx+deQAEOsT9gKvKkwPCtPWTEUeU3tPi0sv+5G4i64YwxjpQqw+tinBf9fio6ysDGJC2A6/Uzt27NBoNPfu3QMSMAipfNl8LsXXPzi76j7LmrLmDXli5cG8zS95T99bBxx3i4b6B39QWIOY6y485x8MnBPj1m9PzrrK1qX8x8DApNMsayjQ7gZSyIL1Gdrss7X1bN3VxX5q34CYbdrs1PVvQpdxSSf54XDBvovpkgbY4BWXrD2k3T4FykHvXEWsSCVoX56kzUj7JxS8p229ayuLV+zPCzYfyj24LOppYPus+A5w6fYshrJvQPTanbsOFN+Ulnb1Vb/g3jEr0gsKMzf/Dbq8nnPFwhwQs1ubn6vdAY1eS7LtRraXL2E4se6zUqSS6dJhEAVjga/WzxsMZYuqqQuhPGdj6je5B9+ZMQh0PgmeZKmKSQqxU4+vMnxJWCARA5FRVVUF7/fv3z9w4ABEDFSBzUHEEI8vzrtB9FtWWINiKCD6TF29OT8JCt/XQjBZIka98TtuUFNKVMg4FDHo2B8VMjblPCnrMt+x9mLZ0h2v+AbOu1BnE812XYhPl+XhIGFZY/4nyGV19abrR8CPH5OQZVkS3Lt0P5OBLO84lHssSUchjo6aDcMH9JmJIl63Z4FQE0lpdRcgRi0nBstWnDpxtgLCEhnI22uqKDtecp0MwL/byZcyXBAx6ATwCd/EBb0pKWoQUdVQUVZUftsi+W4BiiSIMAnFpITwitkV6GslchW6evUq/Az169cPlkWwbgoKCoIlks0FSlxR9X6hX7u5J3Sr+tR+o/BI6tuprWpAAPt+fmVtmzIN221igLv1d3BBhL9YAFxRzQyjMHE/PsZbDHtp3ar4Xpi14nIxw/Yx2nez7YKpQV4WVZVdekADWteZ0Nxr58b3L/RojViM6MfTYISBHkdVwREzOpibBHUeMzv4kz1GvGK8Z6O/lDSV2wBWse2lURr1mFeixowZPSoQLdnMXfy6/vzp6z6awJhZUydHjB7i31UwICnaynfCcKPhvuL24RVxlonj5fPm1k8gVTt6eXcsPLYlqaDcaKzSX7EMJKGYlBDOA/ZqOoqYHj16eHh4nDlzplWrVu7u7v3797fvTakr1XNGdF53MLfzTfaJOTg+er/Sr91mzVEm95rP3BB+XQ1flEq8PKcIhPDxHaIORrMfhukfGjKJ6SB2trifCcWcfSgA2+AQdf8uJGoHDR7OeHtSVuBt3awTOKUKmJUcE1+wDEiT5rGyNC8y66s0zb4Nq+I3rGLmbslIGN5r9GrtV88eStMcSPvwg70ffuAe878nE8NFatvKd8Lwe359+quDiZzBoSGsWy9Q9WhCxMIDBo8Rk6YP6tdf3T7v9HnM0J2mWHcgUYWIdLM0OIoYuLSMGTMmIyMD7soMGzasTRtHzPwA3uoJituxb61lhq5cguNDGTrnmaVLV61lmPeH+/Bsjgs3THChwYcSvjxl5PMvBpF7POiOTn1P7n6PUIi1i7BVVFZHTn/Zj0QSunvU1Uu8cGMOH9WtGU4uasYTmjP1nhEiMZYGijRTTbn+19DI6fBaw9zcOCJy/cHShOHdK3R6z9BxS+D1AXNiw9QXdhy8lhhOxqALlzCc8wvqpGRgcTJw5hyyxmRMhsrbTGcVczNXY/SJ+/zgvH6IqSIncU0aKkgoJiEE9aAe5GyzJ8HSFG66QGv79u0jIyPHjx/fvTsKRnIAydHatWfgdBado5NDehL+Hmrs8VajB1DW1RaZwo8u3spfP1yfUVh628R6RywMYEsmv/B2vu6yrvDQjAHDR03YLF55C7sIRQnLSp/RsPhfM2327sLSct3JT58fDjeHigz1Qh4ou7OMIfnvUz7TlujOpCS89u5584y3IsSXaClp5oqCZyZNnLgqs1yvL837fl/N/aBgL4a5GTspqv+0Ffm6Cn3p8TTN9ft9+z1hN7Bt1QnDlWNiF7Uu+W9Y9J3TXy7UfhQ0ZIJ6axHDdA7wU17atf1Qsa4UPDYulgiWUExKiK02wprdvIZUYYYLB1xaYJJrd0AjoVI7ksZvEydyyxPSgOaPgukkzHzRvJ1M+DGHKWtGKD/zNfyQBqsqNEvFixTDpcNkYQUtsC7A0377wYVdyAoihZvSmi5pYakFU2/Up/bK+hkhIAe9AmLwksdWFJ75xiWnoAUaZotLOU44dJlxPuG7uBkxbqNLMxWkrrYM4R/87PJ91/DQVfkZvBV9ohOPV/xiOzArlk813M46XeZH/FhRKzNuYaGm69/wYy3fuRVm4niCT1cMelCF2KnHVxVQEgYQKcMS+u7du3CbDs8GbOhwdenQoQPc3HPyR8qm8++oYE2UKtrvkatSiVH0y6Tp4tQB0ydrj8/zftzJESWkmU3oZo+9whLMjixwQg3psShG0plhbk5VWKwZfWoC0QDLooZXRmJ5zdZCsb2xYzkSxf5WBc7DCyhHbIKhJdggVgRMXFGCmSPTPp3o4tJYdGYc3LThRW30a4yI7dFpMJbmnW6rHubrbl0uPTrGO2OpHDHOeEnmsXqAvlay0uWS7AFbD8gRY+sPudaQB+SIachDMt3WA3LE2PpDrjXkATliGvKQTLf1gBwxtv6Qaw15QI6Yhjwk0209IEeMrT/kWkMekCOmIQ/JdFsP0CMG8hkqKyvPnj37L9EBjUAiuRC2olDNZKip0NsnIxj1eoM4B1vcWdCiz01esus45EQ14wHAn7h3j1fh9LpmHMZWtIuDGsuzIEP+AAfGsJX1YGr0iGkkXolhLu9fMGrCHpuQMV2cNTZy+C7I23DhMF8+lL6+xPGXKcQoOSla2OWBAH9cHdSsP1fFXqo24PyC2nPr395DwT84aXwTsdEjhopXItAlyHOQxCshlFAn1rMDl+No0RH+xO3jbIYmZ5ZKUd9ZZSeHo5FPG4ySLUmqZtPlgcCaXB3Uc+TSiyXFr+KkQXN1yeb9lGwyKWubqZ0eMZBFJcYrEQ0gT1AarySpJPl9MVfkTA1LKCj+niCJvG2QRObC5DXDMMTmzV1Z5QarYmZ9UeICgldS/+3DTHQBo2KUHKN7qF0aC2u6rE0MfW0fuZSa4YcjaP7xKpLLd23FiNFbT2N8kLQ+pwoPrXgeAZp8w2K/0t3lvGbMS36XeCB04UqCsTJX5ILHLprYSu3awMnvMcyP88dGTFqaQfxZqt1JQEmDZ1r4OVHN+cnnVgkLYrySkArxJIVX0u2Za5+ohrPaSH4dQU5AzticjRm52t0ISRQQQ3LqCFpnYtzmDK0G0vOAp8/Mz3HC21WUThY478sjeZk7VkI7xivZY5RaGNZkQbQgEBBbuPkl0OqNLAAlsQSSotH/IqUP74GolV9kaHdjS8O+RvAulIMHcgBjlZ97ELUHLQP4jOnSXgKdMZT/a0fiy77+YWuS96fnXcL87wB/1ModFo9xngRSsx6O8EpSA//OiInNumCRfCsfsjNf3A9VBGP709tHuRGvrvADMB+JGENJwalbHEDpROJIn3ALLO1BwpowWu/j4p8AkgcJqfDNQU4qKK/PTCTftGO00ayUMxZL756F82ESBmchKFY/DnxUV5lfUIJgToDWw2gvxI/ST6M53yGP9fv0e4ucX8/B6TcRebLZD3oOXnNe1JiR6ict8rsFvO7Z5nNA2JiYCgX75lQ1N26vsTPck86RmpuPd8fDmh35xTp9dXVNmaG+G5nf2GKUnED32COhsPhGwpo6+r7Vuc3WYv0bvX/edKfvxzue++vc9GvrJl/Kyfl56n8BQuCyQ33CgzkPdHwK4F1vnL7MzPiLu5cfc2/ToIBkAE6MmTB6XKg/zP+EyAEz8xuojHIrIXXVZAKPGbM+eqt0P7bjZgnD+FQbiMua9b3JI6aNovrCLYYR4CpQ9qIwg7EjwlVYDlUXDDbDtY6CHF6lu4eFoyInEGXDe0TPmDoyIlhX+68z97nOdp9OoHvsekAVZ9E2AtbkFrJo0LL04tLeVwD2FhY6bPL9dwuKT5/L/ml2UoBlFGl9TGaYh1gHbVuNsFU9xvyjKDNCq0nfo/kkNuUjttuso8eWWgEcYtUZJvDJgf2DCSQheHDouA5PElAXjbXp2po6YtzcmPsHcsviZ1kwQcxv5UU/MMxitQWJApofLLsdPhy7ou767vMmnHeqAszHlpzSN4KHYdOMxZoKBrtCrysChFtK0b6BOJ6yj2z8HE8riQesGCUJdI/YUdYuYpqghQJEElCh6BUytc27Ca++xviv/FLFdJ8U5TX/zb+3auWT1Bfj7yT0IdeMcr2BCSanxM3c0ya/5d5wRgF4sa7LwJjYp2NiV1UXbBr6yv/9ULlogmBQghPlrjroHPxNPe7l2RiUBAhPvZ7F6E9Bj2YpWpckQvGQjSx1jw7YHOCVvMcsHMAwq6Ijt+UUVuj1hVk7w6avYFpPGNu3Ey8/dcH4TVkFOlgxzZxTwnjEjfZlVL0WzusDINNFe3PLdWeS5o9dW3OPVTJwP6Zbl96Aot2+90i57nzWhlf/9t0vpB2kCTFKTqB70PjCLrw+dgUpIJKILWgyq4A08vkYlqWeEN6q+s59fwtM2LE+6XFTErILADO14fnpGQr2jQhfcOp3i2aMHjo9o7C8Qn8+R5PBKAJ8bPGabd09wRXvfgJAqirw2NK3BuhWz4rT5Jfrr4BnBo6N/Jis0ewUbfIqdaZEEEmNwyuZKk6SRyLAfBBegDAquo3R+dw8blvaPwkcCeZxnxfCQxLIUZMW/wLpAs9VSE58kYDOodOR9XN5UZvjJ3DtrBCjBCKo6B5OuOVT2MUO+OMarAnLy4mPtMKy7hbB3HMSP6WV0IeMkqH9Eq0T0StsK/dEAdOtk+g5DKQ9IGZvISyVYOaLZrsWsBVbk7x4JjA8FfwZRucbtPhhF6RLfFaRnbHNVKVnhv9+vJLBUAPBbWLad3W33oczlx8InJKUdS71KYKOEQErJOE8mCBip5w+TqB7KL2oTZLKULklGh3og0gik1we1OUOEoo63Uyfx/x+vJI7XELFBzwPga0xotk+HTUjciAnQpLAMXCfTjNyHaQ/m0SUAyFUErVRWkd0l124qnDE2UQ0+jWmiYSLxJhuFBRe9xsR2lFEkRv+KB5o2Yj5o3hF1lPaA/S1kjS/THnUPSBHzKMeAa7aL0eMqx571PnliHnUI8BV++WIcdVjjzq/HDGPegS4ar8cMa567FHnlyPmUY8AV+2XI8ZVjz3q/PT/lSCfoVH7K3HeRP8GlFUZ62Gvpf5qP367JY78b/dpLD/y3raqv74/U5AI9kCUNH+7ZfWFAa/MDekFSKXxU7YuO/z5VOceadti6tIjhscrif/ngv9Ka2trgQGeKE7VUl+QHP7KagHJI3ZL0uuWByoLmp0rAsLo5J+ngAedY7fjurN/5cce85eEUx7zbEPSf/tFmqb2+cSYXoI8QDtZLVOtTEr/n1bRc0MYK1KJ7uaWUYcyCv1XqdF4JXP5EQiXe/6zNd8UANCm6PDe1/r9snHBnK9FD1qm6EJpskEYUeiOm9g76/buu2SmPH6WsSWpVG3hYZNuDzpckDVdW/8J/xktRCo5trKFqfSIaTRe6dvPVjGtQjO+iMPbNzBuXn3jtmwOYH7ccLScGAZb+SzG2x7B1kVrsi3J30xFwfRpyzNzUmdgvFLowg3nAAVIQxhRsEtELoCDYl8guxcBpgkeNo6wUYHTIEdu9UsTfcMR5If3rATJnJOyncB/JtpAD+mbKPHSLMpnfUH6Ltqbb6g6twLbCHsbHWtwayfTjf2WfZfCN+UUGhiLnjxSCQaStNqqRAuWqJlajcUrGZKGD/Sw7oFjLxtllPkH+4TFp+d+uxNn3BHghfncfpJIlpCWlbHnAyj3WnigTrzXEkvFLqEnkONHfIdt0x4hmCbUvfZK5o73QdScjXsytHncljJYJRHJsreRP5awOQF6PbHqa8za8JZMnPJhn2izd8Yj7BK8AI50CG8UxWFopOQY9s8IBf5Fn6ZlpG0nfSfjXYN4pBJAc2iILXvftli9SfFKGMwmzFy0NQN7zbI5FqIUrp9CNksiuC9+TyLhJkpCUBJkQlKxSwgc5B98UH+PDKc/vHZw9DqU84h9bb+DEmGyJaG9jfzD8EZiiHwicSJBRUluomQRgj6I8ty2TTUb/NQEuwQkPYDW8APupeSQzNF4tGUXOoAN8lm5iOGRSnSrSZeWf6fPfBt7jVP1ZBUX8V5GVAnG6vs1c5/hJ7F+Ec8x2/ZzmyV5hHPZ417q0QxL2m1BSYwEdgnAQW1eHEB2TcIwjvwxeHyc0YjfrFAPi2JikuJPPblNcjz9vZhcvHGN1CZKAuwIEghAEws2oMOTfsqg4L5klC5+IxgmCZWl5LT/GYA1Uwb9mfArewaOYxXHScX6LmG1laFFS00aMaruQ/yUqUfLTDP+gmdvFktMBoNJ5eaOm3q6WSnthPsfKzz5iacKICxoKxjRIYldusd6EvGiLo1suCfsR9tESUhHZV5bjA4hsGh7HoocQEsoPFUMD+BSwiln303SanvGlqk3acQwyuCo/sq173xZNmKWnxWiFjQutu8H+zKjeiuVil92n6id9zTJ2iw9kQ2u5n0tZTCPMJLELik7KW4llxgWDMUbxMHkeu1XxgWLo8nFzGSWHMEBSahMg9glIbODMkVOeVsAlOSf/3FgSGfUsfZqRqt66ymFZUla7WCk5iTR10pwG6ZxeCW/mKVhLOCVwtdkF1TorxTCCgIQjYqANRN8IThgPyDFrU0RS/b8oLsMzzGYtrao/bw3LVttiYwkUC4hwkgKu+QdMReWY3OGxeEdhTJnTV+SnH4XBaXKLYBVrFu9Kb9UZ3/W00hkRKEiTmKXhF3EZRArJUfpM+R1z9YfvhS9Le+UrvjYvCEvAxjW7pCy2o6t5arUqdPvwSuxtResexjBIxqiE4R7CZUf3mkBK+EnPJAljC0qh8DTY8j2oUKEkQPskunS8bkj+pO1Rp+YdfweTMV7/hM3hsHOonaWCklo7izYsFSXupBb4zS8JZOt8iY8VbcA8THOvqGtne6e5eFds7ckJ0Y9TdaPArGSiC07i1qmSs8MbyK8Erot5i7AK3HngbNb+XD8tp940iq+GQ1MmNIseIymkiwlB7cDIkc0ieFNxxxUq3mWlinQI6ZlxpZH+SN6gD6P+SNaIuvcMh6QI6Zl/PzwjCJHzMPzXbaMJXLEtIyfH55R5Ih5eL7LlrFEjpiW8fPDM4ocMQ/Pd9kylsgR0zJ+fnhG+X9qlZ4b8kYnbAAAAABJRU5ErkJggg==" class=img-fluid alt="Markdown task list"></p>
+<h2 id=emoji>表情符号（Emoji）<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#emoji style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h2>
+<p>有两种方式可以将表情符号添加到 Markdown 文档中：将表情符号复制并粘贴到 Markdown 格式的文本中，或者键入 <em>表情符号的简码（emoji shortcodes）</em>。</p>
+<h3 id=复制并粘贴表情符号>复制并粘贴表情符号<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#%E5%A4%8D%E5%88%B6%E5%B9%B6%E7%B2%98%E8%B4%B4%E8%A1%A8%E6%83%85%E7%AC%A6%E5%8F%B7 style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h3>
+<p>在大多数情况下，你可以简单地从 <a href=https://emojipedia.org/>Emojipedia</a> 等来源复制表情符号，然后将其粘贴到文档中。许多 Markdown 应用程序就会自动以 Markdown 格式的文本来显示表情符号。从 Markdown 应用程序导出的 HTML 和 PDF 文件也是可以显示表情符号的。</p>
+<div class="alert alert-success">
+ <i class="fas fa-lightbulb"></i> <strong>提示：</strong> 如果你使用的是静态站点生成器，请确保 <a href=https://www.w3.org/International/tutorials/tutorial-char-enc/>HTML 页面的字符编码为 UTF-8</a>。
+</div>
+<h3 id=使用表情符号的简码shortcodes>使用表情符号的简码（Shortcodes）<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#%E4%BD%BF%E7%94%A8%E8%A1%A8%E6%83%85%E7%AC%A6%E5%8F%B7%E7%9A%84%E7%AE%80%E7%A0%81shortcodes style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h3>
+<p>某些 Markdown 应用程序允许你通过键入表情符号的简码（shortcodes）来插入表情符号。简码以冒号开头和结尾，两个冒号中间是表情符号的名称。</p>
+<div class="language-text highlighter-rouge"><div class=highlight><pre class=highlight><code>Gone camping! :tent: Be back soon.
+
+That is so funny! :joy:
+</code></pre></div></div>
+<p>渲染效果如下所示：</p>
+<p>Gone camping! ⛺ Be back soon.</p>
+<p>That is so funny! 😂</p>
+<div class="alert alert-info">
+ <i class="fas fa-info-circle"></i> <strong>注意：</strong> 你可以使用这个 <a href=https://gist.github.com/rxaviers/7360908>表情符号简码列表</a>，但请记住，表情符号的简码随着 Markdown 应用程序的不同而不同。有关详细信息，请参阅你所使用的 Markdown 应用程序的文档。
+</div>
+<h2 id=highlight>Highlight<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#highlight style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h2>
+<p>This isn’t common, but some Markdown processors allow you to highlight text. The result looks <mark>like this</mark>. To highlight words, use two equal signs (<code class="language-plaintext highlighter-rouge">==</code>) before and after the words.</p>
+<div class="language-text highlighter-rouge"><div class=highlight><pre class=highlight><code>I need to highlight these ==very important words==.
+</code></pre></div></div>
+<p>The HTML looks like this:</p>
+<div class="language-html highlighter-rouge"><div class=highlight><pre class=highlight><code>I need to highlight these <span class=nt>&lt;mark&gt;</span>very important words<span class=nt>&lt;/mark&gt;</span>.
+</code></pre></div></div>
+<p>The rendered output looks like this:</p>
+<p>I need to highlight these <mark>very important words</mark>.</p>
+<h2 id=subscript>Subscript<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#subscript style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h2>
+<p>This isn’t common, but some Markdown processors allow you to use <em>subscript</em> to position one or more characters slightly below the normal line of type. To create a subscript, use one tilde symbol (<code class="language-plaintext highlighter-rouge">~</code>) before and after the characters.</p>
+<div class="language-text highlighter-rouge"><div class=highlight><pre class=highlight><code>H~2~O
+</code></pre></div></div>
+<p>The HTML looks like this:</p>
+<div class="language-html highlighter-rouge"><div class=highlight><pre class=highlight><code>H<span class=nt>&lt;sub&gt;</span>2<span class=nt>&lt;/sub&gt;</span>O
+</code></pre></div></div>
+<p>The rendered output looks like this:</p>
+<p>H<sub>2</sub>O</p>
+<div class="alert alert-success">
+ <i class="fas fa-lightbulb"></i> <strong>Tip:</strong> Be sure to test this feature in your Markdown application before using it. Some Markdown applications use one tilde symbol before and after words not for subscript, but for <a href=#strikethrough>strikethrough</a>. 
+</div>
+<h2 id=superscript>Superscript<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#superscript style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h2>
+<p>This isn’t common, but some Markdown processors allow you to use <em>superscript</em> to position one or more characters slightly above the normal line of type. To create a superscript, use one caret symbol (<code class="language-plaintext highlighter-rouge">^</code>) before and after the characters.</p>
+<div class="language-text highlighter-rouge"><div class=highlight><pre class=highlight><code>X^2^
+</code></pre></div></div>
+<p>The HTML looks like this:</p>
+<div class="language-html highlighter-rouge"><div class=highlight><pre class=highlight><code>X<span class=nt>&lt;sup&gt;</span>2<span class=nt>&lt;/sup&gt;</span>
+</code></pre></div></div>
+<p>The rendered output looks like this:</p>
+<p>X<sup>2</sup></p>
+<h2 id=automatic-url-linking>自动将 URL 转换为链接<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#automatic-url-linking style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h2>
+<p>许多 Markdown 解析器会自动将 URL 转换为链接。这意味着，即使你没有 <a href=https://www.markdown.xyz/basic-syntax/#links>使用中括号</a>，如果你输入 http://www.example.com，你的 Markdown 解析器也会自动将其转换为链接。</p>
+<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code>http://www.example.com
+</code></pre></div></div>
+<p>渲染效果如下所示：</p>
+<p><a href=http://www.example.com/>http://www.example.com</a></p>
+<h2 id=禁止自动将-url-转换为链接>禁止自动将 URL 转换为链接<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#%E7%A6%81%E6%AD%A2%E8%87%AA%E5%8A%A8%E5%B0%86-url-%E8%BD%AC%E6%8D%A2%E4%B8%BA%E9%93%BE%E6%8E%A5 style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h2>
+<p>如果你不希望自动将 URL 转换为链接，则可以通过反引号 <a href=https://www.markdown.xyz/basic-syntax/#code>将 URL 表示为代码</a> 。</p>
+<div class="language-plaintext highlighter-rouge"><div class=highlight><pre class=highlight><code>`http://www.example.com`
+</code></pre></div></div>
+<p>渲染效果如下所示：</p>
+<p><code class="language-plaintext highlighter-rouge">http://www.example.com</code></p>
+ 
+ </div>
+ <div class="col-md-3 d-none d-md-block" id=sidebar>
+ <nav id=toc data-toggle=toc class=sticky-top style=z-index:1><ul class="nav navbar-nav"><li><a class=nav-link href=#overview>概述</a><li><a class=nav-link href=#availability>可用性</a><ul class="nav navbar-nav sf-hidden"></ul><li><a class=nav-link href=#tables>表格（Tables）</a><ul class="nav navbar-nav sf-hidden"></ul><li><a class=nav-link href=#fenced-code-blocks>围栏代码块（Fenced Code Blocks）</a><ul class="nav navbar-nav sf-hidden"></ul><li><a class=nav-link href=#footnotes>脚注（Footnotes）</a><li><a class=nav-link href=#heading-ids>自定义标题的 ID</a><li><a class=nav-link href=#definition-lists>定义列表（Definition Lists）</a><li><a class=nav-link href=#strikethrough>删除线（Strikethrough）</a><li><a class=nav-link href=#task-lists>任务列表（Task Lists）</a><li><a class=nav-link href=#emoji>表情符号（Emoji）</a><ul class="nav navbar-nav sf-hidden"></ul><li><a class=nav-link href=#highlight>Highlight</a><li><a class=nav-link href=#subscript>Subscript</a><li><a class=nav-link href=#superscript>Superscript</a><li><a class=nav-link href=#automatic-url-linking>自动将 URL 转换为链接</a><li><a class=nav-link href=#%E7%A6%81%E6%AD%A2%E8%87%AA%E5%8A%A8%E5%B0%86-url-%E8%BD%AC%E6%8D%A2%E4%B8%BA%E9%93%BE%E6%8E%A5>禁止自动将 URL 转换为链接</a></ul></nav>
+ 
+ <div style=position:fixed;bottom:0px;right:0px>
+ <div data-ea-publisher=markdownguide data-ea-type=image></div>
+ </div>
+ 
+ </div>
+ </div>
+ </div>
+ <footer class=site-footer>
+ <div class=container>
+ <div class="row justify-content-between">
+ <div class=col-md-6>
+ <p style=font-size:14px;font-weight:600><a href=https://www.markdown.xyz/about/>关于</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href=https://www.markdown.xyz/contact/>Contact</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href=https://github.com/mattcone/markdown-guide>GitHub</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href=https://www.markdown.xyz/api/v1/>API</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href=https://app.termly.io/document/privacy-policy/1ca2b712-96e3-46bf-a8f1-d0035d389e7d>Privacy Policy</a></p>
+ <p style=margin-top:15px;margin-bottom:0;font-size:14px>© 2022. A <a href=https://www.mattcone.com/>Matt Cone</a> project. <a rel=license href=https://creativecommons.org/licenses/by-sa/4.0/>CC BY-SA 4.0</a>. Made with 🌶️ in <a href=https://www.newmexico.org/>New Mexico</a>.</p>
+ <p style=font-size:14px>© 2022 Markdown 指南中文版采用 <a rel=license href=https://creativecommons.org/licenses/by-sa/4.0/>CC BY-SA 4.0</a> 许可证发布。</p>
+ <p style=font-size:14px><a class=text-muted href=https://beian.miit.gov.cn/ target=_blank>京ICP备15031610号-30</a></p>
+ </div>
+ <div class=col-md-3>
+ <h5 class=pt-0 id=友链>友链<a class=anchorjs-link aria-label=Anchor data-anchorjs-icon= href=#%E5%8F%8B%E9%93%BE style="font:1em/1 anchorjs-icons;padding-left:0.375em"></a></h5>
+ <ul class="list-unstyled text-small">
+ <li><a href=https://www.bootcss.com/ target=_blank>Bootstrap中文网</a></li>
+ <li><a href=https://www.tailwindcss.cn/ target=_blank>Tailwind CSS</a></li>
+ <li><a href=https://reactjs.bootcss.com/ target=_blank>React</a></li>
+ <li><a href=https://www.mdxjs.cn/ target=_blank>MDX</a></li>
+ <li><a href=https://www.nextjs.cn/ target=_blank>Next.js</a></li>
+ <li><a href=https://www.docusaurus.cn/ target=_blank>Docusaurus</a></li>
+ <li><a href=https://www.gatsbyjs.cn/ target=_blank>Gatsby</a></li>
+ <li><a href=https://www.blitzjs.cn/ target=_blank>Blitz</a></li>
+ <li><a href=https://vuejs.bootcss.com/ target=_blank>Vue</a></li>
+ <li><a href=https://www.nuxtjs.cn/ target=_blank>Nuxt.js</a></li>
+ <li><a href=https://www.vuepress.cn/ target=_blank>VuePress</a></li>
+ <li><a href=https://www.gridsome.cn/ target=_blank>Gridsome</a></li>
+ <li><a href=https://www.jekyll.com.cn/ target=_blank>Jekyll</a></li>
+ <li><a href=https://www.gohugo.cn/ target=_blank>Hugo</a></li>
+ <li><a href=https://www.npmjs.cn/ target=_blank>npm</a></li>
+ <li><a href=https://www.yarnpkg.cn/ target=_blank>Yarn</a></li>
+ <li><a href=https://www.pnpm.cn/ target=_blank>pnpm</a></li>
+ <li><a href=https://www.webpackjs.com/ target=_blank>Webpack</a></li>
+ <li><a href=https://www.rollupjs.com/ target=_blank>Rollup.js</a></li>
+ <li><a href=https://www.parceljs.cn/ target=_blank>Parcel</a></li>
+ <li><a href=https://www.alpinejs.cn/ target=_blank>Alpine.js</a></li>
+ <li><a href=https://www.sasscss.com/ target=_blank>Sass</a></li>
+ <li><a href=https://www.wasm.com.cn/ target=_blank>WebAssembly</a></li>
+ <li><a href=https://www.denojs.cn/ target=_blank>Deno</a></li>
+ </ul>
+ </div>
+ </div>
+ </div>
+</footer>
+ 
