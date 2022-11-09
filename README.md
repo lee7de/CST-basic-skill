@@ -1,10 +1,8 @@
-# Outline
-
-[missing-semester官方网站](https://missing.csail.mit.edu/)
-
-[中文版官方链接](https://missing-semester-cn.github.io/)
+# Overview
 
 基于MIT的公开课，总结CST学习和实践过程中用到的基本工具
+
+-   `The shell` 
 
 - `Git`【Git，版本管理工具，工程协作】
     - Git配置工作原理
@@ -12,4 +10,6 @@
     - Markdown语法
 
 # Reference and further Reading
-部分链接在行文过程给出，下面列出相对通用的内容。
+[missing-semester官方网站](https://missing.csail.mit.edu/)
+
+[中文版官方链接](https://missing-semester-cn.github.io/)
